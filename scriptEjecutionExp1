@@ -1,0 +1,10 @@
+chmod +x bookAnalyser1.R
+chmod +x bookAnalyser2.R
+chmod +x functions.R
+
+mkdir ./data-test-Exp1/execution1_Mystery_Mystery/
+mkdir ./data-test-Exp1/execution1_Mystery_Romantic/
+mkdir ./data-test-Exp1/execution1_Mystery_Wartime/
+cp ./data/dataForTest/mystery-test/1/Dr_Jekyll_y_Mr_Hyde.txt ./data-test-Exp1/execution1_Mystery_Mystery/Dr_Jekyll_y_Mr_Hyde.txt
+cp ./data/dataForTest/romantic-test/laLetraEscarlata.txt ./data-test-Exp1/execution1_Mystery_Romantic/laLetraEscarlata.txt
+cp ./data/dataForTest/wartime-test/bailen.txt ./data-test-Exp1/execution1_Mystery_Wartime/bailen.txt

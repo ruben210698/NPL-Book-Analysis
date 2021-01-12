@@ -1,0 +1,37 @@
+chmod +x analisys2.py
+chmod +x bookAnalyser1.R
+chmod +x bookAnalyser2.R
+chmod +x functions.R
+pip install -r requirements.txt
+
+mkdir ./data-test/execution1_Mystery_Mystery_1/
+mkdir ./data-test/execution1_Mystery_Mystery_2/
+mkdir ./data-test/execution1_Mystery_Romantic/
+mkdir ./data-test/execution1_Mystery_Wartime/
+#The same file in 3 dir
+#Aprox 7 min
+python3 analisys2.py ./data/mystery/ ./data-test/execution1_Mystery_Mystery_1/allVerbsMystery.txt
+cp ./data-test/execution1_Mystery_Mystery_1/allVerbsMystery.txt ./data-test/execution1_Mystery_Mystery_2/allVerbsMystery.txt
+cp ./data-test/execution1_Mystery_Mystery_1/allVerbsMystery.txt ./data-test/execution1_Mystery_Romantic/allVerbsMystery.txt
+cp ./data-test/execution1_Mystery_Mystery_1/allVerbsMystery.txt ./data-test/execution1_Mystery_Wartime/allVerbsMystery.txt
+
+python3 analisys2.py ./data/dataForTest/mystery-test/2/ ./data-test/execution1_Mystery_Mystery_1/muerte_en_el_nilo_Verbs.txt
+python3 analisys2.py ./data/dataForTest/mystery-test/1/ ./data-test/execution1_Mystery_Mystery_2/Dr_Jekyll_y_Mr_Hyde.txt
+python3 analisys2.py ./data/dataForTest/romantic-test/ ./data-test/execution1_Mystery_Romantic/laLetraEscarlata.txt
+python3 analisys2.py ./data/dataForTest/wartime-test/ ./data-test/execution1_Mystery_Wartime/bailen.txt
+
+#Aprox 20 min
+mkdir ./data-test/execution2_Romantic_Mystery/
+mkdir ./data-test/execution2_Romantic_Romantic/
+mkdir ./data-test/execution2_Romantic_Wartime/
+
+python3 analisys2.py ./data/romantic/ ./data-test/execution2_Romantic_Mystery/allVerbsRomantic.txt
+cp ./data-test/execution2_Romantic_Mystery/allVerbsRomantic.txt ./data-test/execution2_Romantic_Romantic/allVerbsRomantic.txt
+cp ./data-test/execution2_Romantic_Mystery/allVerbsRomantic.txt ./data-test/execution2_Romantic_Wartime/allVerbsRomantic.txt
+
+python3 analisys2.py ./data/dataForTest/mystery-test/1/ ./data-test/execution2_Romantic_Mystery/Dr_Jekyll_y_Mr_Hyde.txt
+python3 analisys2.py ./data/dataForTest/romantic-test/ ./data-test/execution2_Romantic_Romantic/laLetraEscarlata.txt
+python3 analisys2.py ./data/dataForTest/wartime-test/ ./data-test/execution2_Romantic_Wartime/bailen.txt
+
+
+
